@@ -5,7 +5,8 @@ exports.handler = async function (event) {
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    return { statusCode: 500, body: JSON.stringify({ error: "API key not configured" }) };
+    return { statusCode: 500, body: JSON.stringify({ error: "API key not configured - env var missing" }) };
+  }) };
   }
 
   let body;
