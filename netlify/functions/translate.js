@@ -1,3 +1,4 @@
+Copy everything between the lines and paste it into GitHub:
 exports.handler = async function (event) {
   if (event.httpMethod !== "POST") {
     return { statusCode: 405, body: "Method Not Allowed" };
@@ -5,8 +6,7 @@ exports.handler = async function (event) {
 
   const apiKey = process.env.ANTHROPIC_API_KEY;
   if (!apiKey) {
-    return { statusCode: 500, body: JSON.stringify({ error: "API key not configured - env var missing" }) };
-  }) };
+    return { statusCode: 500, body: JSON.stringify({ error: "API key not configured" }) };
   }
 
   let body;
