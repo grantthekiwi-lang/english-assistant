@@ -5,3 +5,7 @@ compatibility_flags = ["nodejs_compat"]
 
 [assets]
 directory = "."
+
+[observability.logs]
+enabled = true
+invocation_logs = true
