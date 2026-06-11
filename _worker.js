@@ -60,7 +60,11 @@ export default {
       }
     }
 
-    return env.ASSETS.fetch(request);
+    try {
+  return await env.ASSETS.fetch(request);
+} catch {
+  return new Response("Not found", { status: 404 });
+}
   },
 };
 
